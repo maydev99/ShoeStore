@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="login_to_your_account">Login to your Account</string>
+    <string name="login">LogIn</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+</resources>
