@@ -10,17 +10,12 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
             android:text="@string/login_to_your_account"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:textColor="?attr/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/title_style" />
 
         <Button
             android:id="@+id/loginButton"
@@ -28,12 +23,11 @@
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
             android:text="@string/login"
-            android:backgroundTint="?attr/colorPrimary"
-            android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+            style="@style/button_style" />
 
         <Button
             android:id="@+id/createAccountButton"
