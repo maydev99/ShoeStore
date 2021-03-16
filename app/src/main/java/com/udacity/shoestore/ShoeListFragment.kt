@@ -2,7 +2,6 @@ package com.udacity.shoestore
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -11,6 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.Shoe
 import kotlinx.android.synthetic.main.shoe_item_card.view.*
+import timber.log.Timber
 
 
 class ShoeListFragment : Fragment() {
@@ -30,7 +30,11 @@ class ShoeListFragment : Fragment() {
             val action = ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment()
             NavHostFragment.findNavController(this).navigate(action)
         }
+
+
         viewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
+
+        binding.lifecycleOwner = this
         observeData()
 
         setHasOptionsMenu(true)
@@ -38,14 +42,18 @@ class ShoeListFragment : Fragment() {
     }
 
     private fun observeData() {
-        viewModel.shoesData.observe(viewLifecycleOwner, Observer { newShoes ->
 
-            binding.shoeList.removeAllViews()
-            newShoes.forEach { addShoe(it) }
+        viewModel.shoesData.observe(viewLifecycleOwner, Observer { newShoes ->
+            newShoes.forEach {
+                Timber.i("LISTFRAG: ${it.name}")
+                addShoeToLayout(it)
+
+            }
+
         })
     }
 
-    private fun addShoe(item: Shoe) {
+    private fun addShoeToLayout(item: Shoe) {
         val shoeItemCard = layoutInflater.inflate(R.layout.shoe_item_card, binding.shoeList, false)
 
         shoeItemCard.apply {
@@ -55,7 +63,6 @@ class ShoeListFragment : Fragment() {
             item_description_text_view.text = item.description
             binding.shoeList.addView(shoeItemCard)
         }
-
 
 
     }

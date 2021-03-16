@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -16,7 +14,7 @@
 
         <variable
             name="shoeSize"
-            type="Double" />
+            type="String" />
 
         <variable
             name="shoeDescription"
@@ -31,7 +29,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:cardCornerRadius="16dp"
         android:elevation="10dp"
         android:id="@+id/card_container"
         android:layout_marginBottom="6dp">
@@ -64,6 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/white"
+                    android:text="@={shoeName}"
                     tools:text="Shoe Name" />
 
                 <TextView
@@ -71,6 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/white"
+                    android:text="@={shoeCompany}"
                     tools:text="Company Name" />
 
                 <TextView
@@ -78,6 +77,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/white"
+                    android:text="@={shoeSize}"
                     tools:text="Size" />
 
                 <TextView
@@ -85,6 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/white"
+                    android:text="@={shoeDescription}"
                     tools:text="Description" />
 
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Added Text to EditTextViews for Testing-->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,15 +23,17 @@
 
         <EditText
 
-            android:id="@+id/shoe_name_edit_text"
+            android:id="@+id/shoe_company_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:text="Nike"
             android:hint="@string/shoe_name_company"
-            android:inputType="textPersonName"
+            android:inputType="textCapWords"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name_edit_text"
+            android:importantForAutofill="no" />
 
         <Button
             android:id="@+id/cancel_button"
@@ -61,9 +63,9 @@
             android:id="@+id/company_text_view"
             style="@style/label_style_detail"
             android:text="@string/company"
-            app:layout_constraintBottom_toBottomOf="@+id/shoe_name_edit_text"
+            app:layout_constraintBottom_toBottomOf="@+id/shoe_company_edit_text"
             app:layout_constraintStart_toStartOf="@+id/shoe_name_text_view"
-            app:layout_constraintTop_toTopOf="@+id/shoe_name_edit_text" />
+            app:layout_constraintTop_toTopOf="@+id/shoe_company_edit_text" />
 
         <TextView
             android:id="@+id/shoe_name_text_view"
@@ -71,10 +73,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/shoe_name"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
-            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+            app:layout_constraintBottom_toBottomOf="@+id/shoe_name_edit_text"
+            app:layout_constraintEnd_toStartOf="@+id/shoe_name_edit_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toTopOf="@+id/shoe_name_edit_text" />
 
         <TextView
             android:id="@+id/shoe_size_text_view"
@@ -97,16 +99,18 @@
             app:layout_constraintTop_toTopOf="@+id/description_edit_text" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/shoe_name_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textCapWords"
+            android:text="Air Jordan"
             android:hint="@string/shoe_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/shoe_size_edit_text"
@@ -114,10 +118,12 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:text="11.5"
             android:hint="@string/shoe_size"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_name_edit_text" />
+            app:layout_constraintTop_toBottomOf="@+id/shoe_company_edit_text"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/description_edit_text"
@@ -126,9 +132,11 @@
             android:layout_marginEnd="32dp"
             android:hint="@string/shoe_description"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:text="Basketball Shoe"
+            android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_size_edit_text" />
+            app:layout_constraintTop_toBottomOf="@+id/shoe_size_edit_text"
+            android:importantForAutofill="no" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
