@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -20,7 +20,8 @@ class InstructionsFragment : Fragment() {
         binding = FragmentInstructionsBinding.inflate(layoutInflater, container, false)
 
         binding.shoesButton.setOnClickListener {
-            val action = InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment()
+            val action =
+                InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment()
             NavHostFragment.findNavController(this).navigate(action)
         }
 

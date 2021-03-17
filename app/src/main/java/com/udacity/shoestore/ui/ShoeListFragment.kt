@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.ui
 
 import android.os.Bundle
 import android.view.*
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ShoeItemCardBinding
 import timber.log.Timber

@@ -22,10 +22,6 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
-    }
-
     buildFeatures {
         dataBinding true
     }
@@ -40,6 +36,8 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
+
+/*Dependency libraries not updated. Could possibly cause conflicts with project*/
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
