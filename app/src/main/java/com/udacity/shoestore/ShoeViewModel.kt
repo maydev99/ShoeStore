@@ -9,8 +9,8 @@ import timber.log.Timber
 class ShoeViewModel : ViewModel() {
 
     private val _shoesData = MutableLiveData<MutableList<Shoe>>()
-    val shoesData : LiveData<MutableList<Shoe>>
-    get() = _shoesData
+    val shoesData: LiveData<MutableList<Shoe>>
+        get() = _shoesData
 
 
     init {
@@ -23,10 +23,15 @@ class ShoeViewModel : ViewModel() {
 
     }
 
+
     companion object {
-        val SHOE_ONE = Shoe("Chuck Taylor", 10.5, "Converse", "Retro Athletic Shoe", listOf("shoe"))
-        val SHOE_TWO = Shoe("Charged Assert 8", 12.0, "Under Armour", "Running Shoe", listOf("shoe"))
-        val SHOE_THREE = Shoe("Nimbus 22", 8.5, "Asics", "Running Shoe", listOf("shoe"))
+        //Pre-Populated Shoes
+        val SHOE_ONE =
+            Shoe("Chuck Taylor", 10.5, "Converse", "Retro Athletic Shoe", listOf("shoe"))
+        val SHOE_TWO =
+            Shoe("Charged Assert 8", 12.0, "Under Armour", "Running Shoe", listOf("shoe"))
+        val SHOE_THREE =
+            Shoe("Nimbus 22", 8.5, "Asics", "Running Shoe", listOf("shoe"))
     }
 
 }

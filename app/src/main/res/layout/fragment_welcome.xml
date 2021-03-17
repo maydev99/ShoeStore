@@ -2,6 +2,8 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!--This layout is simple and only requires a LinearLayout-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,6 +37,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
             android:text="@string/instructions" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="48dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/shoe"
+            android:contentDescription="@string/image_of_shoes" />
 
     </LinearLayout>
 

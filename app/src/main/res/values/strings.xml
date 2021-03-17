@@ -8,7 +8,7 @@
     <string name="welcome">Welcome</string>
     <string name="shoe_store">Shoe Store</string>
     <string name="instructions">Instructions</string>
-    <string name="the_instructions">Step 1: Tap the Shoes Button\n\nStep 2: Select a Shoe\n\nStep 3: View the Details</string>
+    <string name="the_instructions">Step 1: Tap the Shoes Button to view Inventory\n\nStep 2: Tap the Floating Action Button to add a shoe to inventory.\n\nStep 3: Enter the information for the new shoe.\n\nStep 4: Tap the SAVE button to save to inventory.</string>
     <string name="add_shoe_button">Add Shoe Button</string>
     <string name="logout">Logout</string>
     <string name="enter_shoe_name">Enter Shoe Name</string>
@@ -24,5 +24,6 @@
     <string name="shoe_description">Shoe Description</string>
     <string name="image_of_shoe">Image Of Shoe</string>
     <string name="shoes">Shoes</string>
+    <string name="image_of_shoes">Image of Shoes</string>
 
 </resources>
